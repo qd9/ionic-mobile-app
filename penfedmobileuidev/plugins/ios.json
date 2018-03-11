@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "org.penfed.mobile"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.virtusa.penfed.mobile"
+        },
+        "cordova-plugin-mauron85-background-geolocation": {
+            "ALWAYS_USAGE_DESCRIPTION": "This app requires background location tracking",
+            "PACKAGE_NAME": "com.virtusa.penfed.mobile.ionic"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.virtusa.penfed.mobile.ionic"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.virtusa.penfed.mobile"
+        }
+    }
+}

@@ -1,0 +1,104 @@
+page-account-locked {
+  .scroll-content {
+    background-color: #f4f4f4;
+  }
+
+  .locked-header {
+    font-family: 'monserrat600',sans-serif;
+    background-color: $header-color;
+    height: 4.6rem;
+    border-bottom: 1px solid $pf-mobile-light-blue-alt;
+  }
+
+  .toolbar-title {
+    text-align: left;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: 3.7rem;
+    color: white;
+  }
+
+  .instruction {
+    font-family: 'monserratRegular',sans-serif;
+    font-size: 1.5rem;
+    color: #282828;
+    margin-left: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  // for android
+  .contact-list.list.list-md {
+    margin-top: 2rem;
+
+    .item.item-block.item-md {
+      background-color: #f4f4f4;
+
+      .item-inner {
+        margin-left: 1.4rem;
+
+        & > .input-wrapper {
+          border-bottom: 1px solid #dedede;
+        }
+      }
+    }
+  }
+  //for ios
+  .list-ios > .item-block:last-child,
+  .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+  }
+
+  .title.title-ios {
+    margin-left: 1rem;
+  }
+
+  .list-ios > .item-block:first-child{
+    border-top: none;
+  }
+  //common css
+  .list {
+    margin-top: 2rem;
+  }
+
+  .item.item-block {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark;
+    background-color: #f4f4f4;
+  }
+  // //delete border-bottom
+  // .item.item-block .item-inner,
+  // .list .item-block .item-inner {
+  //   border-bottom: none;
+  // }
+
+  .control-button {
+    text-align: center;
+  }
+
+  .unlock-button {
+    margin-top: 2rem;
+    width: 22.5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+
+    .button-inner {
+      font-family: 'monserrat500',sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+
+  .turnback-button {
+    margin-top: 3rem;
+    width: 22.5rem;
+    height: 5rem;
+    border: 2px solid $pf-mobile-dark;
+    border-radius: 0.4rem;
+
+    .button-inner {
+      font-family: 'monserrat500',sans-serif;
+      letter-spacing: 1px;
+      color: $pf-mobile-dark;
+    }
+  }
+}

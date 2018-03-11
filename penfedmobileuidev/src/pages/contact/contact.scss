@@ -1,0 +1,221 @@
+page-contact {
+  // for ios
+  .header-ios {
+    .contact-header {
+      font-family: 'monserrat600',sans-serif !important;
+      font-size: 1.4rem;
+      background-color: #0F2D52;
+      height: 64px;
+      border-bottom: 1px solid $pf-mobile-light-blue-alt;
+
+      .contact-toolbar {
+        .toolbar-background {
+          background-color: $pf-mobile-dark;
+        }
+      }
+    }
+
+    .toolbar-title {
+      text-align: left;
+      margin-left: -2rem;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      line-height: 6.5rem;
+      color: white;
+    }
+  }
+
+  .icon-ios {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    &.ion-ios-menu {
+      height: 0.9rem;
+    }
+
+    &.ion-ios-mail {
+      height: 0.9rem;
+      margin-left: 7px;
+    }
+  }
+
+  .disable-hover.button.button-ios.button-default.button-default-ios {
+    background-color: $header-color;
+    margin: 0;
+    height: 4.8rem;
+  }
+
+  .disable-hover.bar-buttons.bar-buttons-ios.button.button-ios.button-default.button-default-ios.button-menutoggle.button-menutoggle-ios {
+    padding-left: 1.2rem;
+    margin: 0;
+    height: 4.8rem;
+    background-color: $header-color;
+
+    .button-inner {
+      color: $pf-mobile-white;
+    }
+  }
+  //for android
+  .icon.icon-md {
+    color: #FFFFFF;
+    font-weight: 500;
+
+    &.ion-md-menu {
+      font-size: 2.4rem;
+    }
+
+    &.ion-ios-mail {
+      font-size: 2.4rem;
+    }
+  }
+
+  .disable-hover.bar-buttons.bar-buttons-md.button.button-md.button-default.button-default-md.button-menutoggle.button-menutoggle-md {
+    height: 3.3rem;
+    background-color: $header-color;
+  }
+
+  .disable-hover.button.button-md.button-default.button-default-md {
+    height: 3.3rem;
+    background-color: $header-color;
+  }
+  // common css
+  .contact-header {
+    font-family: 'monserrat600',sans-serif !important;
+    font-size: 1.4rem;
+    background-color: rgba(17,46,81,1);
+    height: 4.7rem;
+    border-bottom: 1px solid $pf-mobile-light-blue-alt;
+
+    .contact-toolbar {
+      .toolbar-background {
+        background-color: $pf-mobile-dark;
+      }
+    }
+  }
+
+  .toolbar-title {
+    text-align: left;
+    margin-left: -2rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 4.1rem;
+    color: white;
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .toolbar-title {
+    color: $pf-mobile-white;
+  }
+
+  .list-header.item {
+    border-bottom: 2px solid rgba(90, 96, 110, 1);
+    border-top: none;
+    background-color: #f4f4f4;
+    margin-bottom: 0;
+
+    .label {
+      margin-bottom: 0.1rem;
+      padding-top: 1rem;
+      font-family: 'monserrat600',sans-serif !important;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .item.item-block {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    color: $pf-mobile-dark;
+    background-color: #f4f4f4;
+  }
+
+  .agentButton {
+    font-family: "monserrat500",sans-serif !important;
+    letter-spacing: 1px;
+    height: 5rem;
+    font-size: 1.6rem;
+    background-color: #022A55;
+    border-radius: 4px;
+  }
+
+  .realityDesc {
+    color: #282828;
+    white-space: normal;
+    font-size: 1.5rem;
+    font-family: 'monserratRegular', sans-serif !important;
+
+    a {
+      color: $pf-mobile-dark;
+    }
+  }
+
+  .icon.ion-clock-outline {
+    margin-top: 0;
+  }
+
+  .title {
+    white-space: nowrap;
+    color: $pf-mobile-white;
+    font-weight: bold;
+    line-height: 3.1rem;
+    font-size: 1.6rem;
+  }
+
+  .back-button {
+    color: $pf-mobile-white;
+  }
+  //delete border
+  .item.item-block .item-inner,
+  .list .item-block .item-inner {
+    border-bottom: none;
+  }
+
+  .terms-conditions-a {
+    height: 15px;
+    width: 330px;
+    color: #0F2D52;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+    padding:0px;
+    }
+
+  .about-penfed-field,
+  .find-agent-field {
+    &.item.item-block {
+      & > .item-inner {
+        & > .input-wrapper {
+          border-bottom: none;
+          background-color: #f4f4f4;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .contact-footer {
+    font-family: 'monserratRegular', sans-serif !important;
+    color: $pf-mobile-legal-blue;
+    font-size: 1.2rem;
+    padding-left: 1.1rem;
+
+    p {
+      text-decoration: underline;
+    }
+  }
+
+  .list > .item-block:last-child,
+  .list > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+  }
+
+  .icon.icon-ios.ion-ios-arrow-back {
+    height: 0.8rem;
+  }
+}

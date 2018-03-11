@@ -1,0 +1,116 @@
+account-recent-transactions{
+  > .list{
+    @media(min-width: 600px) and (max-width: 1100px) {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  .recentDate, .recentTransaction{
+    span:first-child{
+      display:inline-block;
+      // float: left;
+      width:70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &+span:last-child{
+        display:inline-block;
+        // float: right;
+        width:29%;
+        text-align: right;
+      }
+    }
+  }
+  .recentDate{
+    font-family:"monserrat300", sans-serif;
+    font-size: 13px;
+  }
+  ion-list > .item .label{
+    margin-right: 0px; 
+  }
+  .recentTransaction{
+    font-family: "monserratRegular", sans-serif;
+    font-size: 15px;
+    color: $pf-mobile-dark-grey;
+    span:last-child{
+      &:before{
+        content:"$";
+        font-size: 14px;
+        top:-3px;
+        position: relative;
+        padding-right: 1%;
+      }
+    }
+    &.no-dollar span:last-child:before{
+        content:"";
+        padding: 0px;
+        position: static;
+      }
+  }
+  .creditTransaction{
+    color:#539C2F;
+  }
+  button.item{
+    padding:0px;
+    .label{
+      margin: 0px;
+    }
+  }
+  .list .item-block {
+    padding-right: 16px;
+    .item-inner{
+      padding-right: 0px; 
+      .label{
+        margin-right: 0px;
+      }
+    }
+    &:last-of-type{
+      .item-inner{
+        margin: 0px -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+  .list button.item-block {
+    padding-right: 0px;
+    .item-inner {
+      background-image: none;
+      border-bottom:0px;
+      padding:0px;
+    }
+  } 
+  .checkLabel{
+    text-decoration: underline;
+  }
+  .ion-ios-add-circle, .ion-ios-remove-circle{
+    color:$pf-mobile-light-blue;
+  }
+  .taxInstructions{
+  text-align: center;
+  padding: 10px 0px;
+  font-family: "monserratRegular", sans-serif;
+  font-size: 13px;
+}
+}
+.accountDetails{
+  &.taxInformation{
+    height: 100%;
+    max-height: 100%;
+    background-color: $pf-mobile-white;
+    li span:first-child{
+      width:70%;
+    }
+    li span:last-child{
+      width:29%;
+    }
+    .loading-crescent{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  li:last-of-type{
+    margin: 0px -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-row class="show-hide-header">
+    <ion-col col-1>
+      <button (click)="close()" class="backButton">
+          <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-11>
+      <ion-title>ACCOUNT SHOW/HIDE</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+  <div class = "show-hide-description">Set the accounts you can view and access on your mobile device.</div>
+  <!--AccountsList-->
+  <div *ngIf="accountsList">
+    <!--checkSaveAccounts-->
+    <div *ngIf="accountsList.checkSaveAccounts.length">
+      <ion-item-divider color="light">CHECKING/SAVINGS</ion-item-divider>
+      <ion-item class="account-content" *ngFor="let account of accountsList.checkSaveAccounts; let i = index ">
+        <ion-label class="label-content" *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}}</div>
+          <div class="bottomLabel">({{account.numLast4}})</div>
+        </ion-label>
+        <ion-label class="label-content" *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}}</div>
+          <div class="bottomLabel"> ({{account.numLast4}})</div>
+        </ion-label>
+        <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="checkSaveAccountsToggleStatus[i]" [(ngModel)]="checkSaveAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+        <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="checkSaveAccountsToggleStatus[i]" [(ngModel)]="checkSaveAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+      </ion-item>
+    </div>
+    <!--creditCardAccounts-->
+    <div class="account-content" *ngIf="accountsList.creditCardAccounts.length">
+      <ion-item-divider color="light">CREDIT CARDS</ion-item-divider>
+      <ion-item class="account-content" *ngFor="let account of accountsList.creditCardAccounts; let i = index">
+        <ion-label class="label-content" *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}} </div>
+          <div class="bottomLabel">({{account.numLast4}})</div>
+        </ion-label>
+        <ion-label class="label-content" *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}}</div>
+          <div class="bottomLabel"> ({{account.numLast4}})</div>
+        </ion-label>
+        <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="creditCardAccountsToggleStatus[i]" [(ngModel)]="creditCardAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+        <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="creditCardAccountsToggleStatus[i]" [(ngModel)]="creditCardAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+      </ion-item>
+    </div>
+    <!--loanAccounts-->
+    <div class="account-content" *ngIf="accountsList.loanAccounts.length">
+      <ion-item-divider color="light">LOANS</ion-item-divider>
+      <ion-item class="account-content" *ngFor="let account of accountsList.loanAccounts; let i = index">
+        <ion-label class="label-content" *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}} </div>
+          <div class="bottomLabel">({{account.numLast4}})</div>
+        </ion-label>
+        <ion-label class="label-content" *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}} </div>
+          <div class="bottomLabel">({{account.numLast4}})</div>
+        </ion-label>
+        <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="loanAccountsToggleStatus[i]" [(ngModel)]="loanAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+        <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="loanAccountsToggleStatus[i]" [(ngModel)]="loanAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+      </ion-item>
+    </div>
+    <!--mortgageAccounts-->
+    <div class="account-content" *ngIf="accountsList.mortgageAccounts.length">
+      <ion-item-divider color="light">MORTGAGES</ion-item-divider>
+      <ion-item class="account-content" *ngFor="let account of accountsList.mortgageAccounts; let i = index">
+        <ion-label class="label-content" *ngIf="account.nickname">
+          <div class="topLabel">{{account.nickname}}</div>
+          <div class="bottomLabel"> ({{account.numLast4}})</div>
+        </ion-label>
+        <ion-label class="label-content" *ngIf="!account.nickname">
+          <div class="topLabel">{{account.fullName}}</div>
+          <div class="bottomLabel">({{account.numLast4}})</div>
+        </ion-label>
+        <ion-toggle *ngIf="account.nickname" name="account.nickname" checked="mortgageAccountsToggleStatus[i]" [(ngModel)]="mortgageAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+        <ion-toggle *ngIf="!account.nickname" name="account.fullName" checked="mortgageAccountsToggleStatus[i]" [(ngModel)]="mortgageAccountsToggleStatus[i]" class="toggle-md button-inner" float-end></ion-toggle>
+      </ion-item>
+    </div>
+  </div>
+  <!-- IRAAccountsList-->
+  <div *ngIf="iraAccountsList.iraAccounts.length || iraAccountsList.certificateAccounts.length">
+    <div>
+      <ion-item-divider color="light">IRA/CERTIFICATES</ion-item-divider>
+      <ng-container *ngIf="iraAccountsList.iraAccounts.length">
+        <ion-item class="account-content">
+          <ion-label class="label-content">
+            <div class="topLabel">IRA Certificates</div>
+          </ion-label>
+          <ion-toggle checked="IRAAccountsToggleStatus" [(ngModel)]="IRAAccountsToggleStatus" class="toggle-md button-inner" float-end></ion-toggle>
+        </ion-item>
+      </ng-container>
+      <ng-container *ngIf="iraAccountsList.certificateAccounts.length">
+        <ion-item class="account-content">
+          <ion-label class="label-content">
+            <div class="topLabel">Money Market Certificates</div>
+          </ion-label>
+          <ion-toggle checked="certificateAccountsToggleStatus" [(ngModel)]="certificateAccountsToggleStatus" class="toggle-md button-inner" float-end></ion-toggle>
+        </ion-item>
+      </ng-container>
+    </div>
+  </div>
+  <div class="submitBtn" position="bottom">
+    <button ion-button type="submit" color="main-text-color" (click)="updateShowHideStaus()">SAVE SETTINGS</button>
+  </div>
+
+</ion-content>

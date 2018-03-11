@@ -1,0 +1,29 @@
+<ion-content id="ionContent">
+    <ion-grid no-padding>
+        <account-header [pageNameParam]="'ACCOUNTS'"></account-header>
+    </ion-grid>
+    <account-list-item *ngIf="!this.hideAccounts.checkSaveAccounts" [accountType]="checkSaveAccounts" [accountTypeLabel]="'CHECKING &amp; SAVINGS'" [accountAsOfDate]="checkSaveAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.reditCardAccounts" [accountType]="reditCardAccounts" [accountTypeLabel]="'CREDIT CARDS'" [accountAsOfDate]="reditCardAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.loanAccounts" [accountType]="loanAccounts" [accountTypeLabel]="'LOANS'" [accountAsOfDate]="loanAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="!this.hideAccounts.mortgageAccounts" [accountType]="mortgageAccounts" [accountTypeLabel]="'MORTGAGES'" [accountAsOfDate]="mortgageAccountsAsOfDate" class="list-item">Loading...</account-list-item>
+
+    <account-list-item *ngIf="this.hideAccounts.iraAccounts === false && iraAccounts.length" [accountType]="iraAccounts" [accountTypeLabel]="'IRA'" [accountAsOfDate]="iraAccountsAsOfDate" class="list-item"></account-list-item>
+
+    <account-list-item *ngIf="this.hideAccounts.certificateAccounts === false && certificateAccounts.length" [accountType]="certificateAccounts" [accountTypeLabel]="'Certificate'" [accountAsOfDate]="certificateAccountsAsOfDate" class="list-item"></account-list-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="accountsText">
+          <p *ngIf="!hideHiddenAccountsMessage">Are you missing accounts on this list? They may be hidden. You can change their hidden status in Accounts Show/Hide Settings.</p>
+          <p *ngIf="hideHiddenAccountsMessage">Balances may reflect transactions that have not yet posted to your account.</p>
+          <div text-center>
+            <button ion-button class="buttonCTA accountShowHide" text-center (click)="goToAccountShowhide()">ACCOUNT SHOW/HIDE</button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <accounts-footer></accounts-footer>
+    </ion-grid>
+</ion-content>

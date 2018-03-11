@@ -1,0 +1,58 @@
+page-account-nickname {
+  .content.content-ios {
+    .scroll-content {
+      padding-top: 0 !important;
+    }
+  }
+
+  ion-icon {
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    text-align: center;
+  }
+
+  .content {
+    background-color: $pf-mobile-light-grey;
+  }
+
+  .nickname-header {
+    font-family: 'monserrat600',sans-serif !important;
+    background-color: $header-color;
+    height: 4.7rem;
+  }
+
+  .backButton {
+    background-color: $header-color;
+    margin: 0.9rem;
+  }
+
+  .nickname-title {
+    .toolbar-title {
+      text-align: left;
+      margin-left: 1.5rem;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      line-height: 4rem;
+      color: white;
+    }
+  }
+
+  .control-button {
+    text-align: center;
+  }
+
+  .forward-button {
+    margin-top: 4rem;
+    width: 22.5rem;
+    height: 5rem;
+    border-radius: 0.4rem;
+
+    .button-inner {
+      font-family: 'monserrat500',sans-serif;
+      letter-spacing: 1px;
+    }
+  }
+}

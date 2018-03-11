@@ -1,0 +1,73 @@
+
+<ion-header>
+  <ion-row class="unlocked-header">
+    <ion-col col-1>
+      <button (click)="popView()" class="backButton">
+        <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-11>
+      <ion-title>UNLOCK ACCOUNT</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-grid no-padding>
+
+    <div class="unlock-description">
+      You can unlock your account and/or reset your password by verifying your identity and account Information
+    </div>
+
+    <form [formGroup]="unlockAccountForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <ion-row class="label-row">
+          <ion-col no-padding class="col-1">
+            <ion-item no-padding class="unlock-list">
+              <ion-label color="main-text-color" stacked>USERNAME</ion-label>
+            </ion-item>
+            <ion-input type="text" formControlName="username" name="username" [formGroup]="unlockAccountForm"></ion-input>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="form-group">
+        <ion-row class="label-row">
+          <ion-col no-padding class="col-2">
+            <ion-item no-padding class="unlock-list">
+              <ion-label color="main-text-color" stacked>SECURITY CODE
+                <ion-icon ios="md-help-circle" md="md-help-circle" class="help-icon" (click)="helpPopUp()"></ion-icon>
+              </ion-label>
+            </ion-item>
+            <ion-input type="number" formControlName="code" name="code" [formGroup]="unlockAccountForm"></ion-input>
+          </ion-col>
+        </ion-row>
+        <!-- <div class="password-match" *ngIf="unlockAccountForm.get('newpassword').hasError('required')">
+        Please input your new password
+      </div> -->
+      </div>
+
+      <div class="rsa-question">
+        WHERE DID YOU MEET YOUR SPOUSE FOR THE FIRST TIME?
+      </div>
+      <div class="form-group">
+        <ion-row class="label-row">
+          <ion-col no-padding class="col-3">
+            <ion-item no-padding class="unlock-list">
+              <ion-label color="main-text-color" stacked>ANSWER
+              </ion-label>
+            </ion-item>
+            <ion-input type="text" formControlName="answer" name="answer" [formGroup]="unlockAccountForm"></ion-input>
+          </ion-col>
+        </ion-row>
+      </div>
+    </form>
+
+    <div class="control-button">
+      <button ion-button class="unlock-button" color="main-text-color" (click)="goToUnlockPage()" [disabled]="unlockAccountForm.invalid">SUBMIT</button>
+    </div>
+
+    <div class="footer-description">
+      If you don’t know your username or security code, please call Member Service at 800-247-5626 or 541-225-6700 (If overseas) to reset your password.
+    </div>
+  </ion-grid>
+</ion-content>

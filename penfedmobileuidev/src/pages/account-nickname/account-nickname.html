@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-row class="nickname-header">
+    <ion-col col-1>
+      <button (click)="popView()" class="backButton">
+        <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-11>
+      <ion-title class="nickname-title">ACCOUNT NICKNAMES</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content no-padding>
+  <account-nickname-item *ngIf="!this.hideAccounts.checkSaveAccounts" [accountType]="checkSaveAccounts" [accountTypeLabel]="'CHECKING &amp; SAVINGS'" class="list-item"></account-nickname-item>
+
+  <account-nickname-item *ngIf="!this.hideAccounts.reditCardAccounts" [accountType]="reditCardAccounts" [accountTypeLabel]="'CREDIT CARDS'" class="list-item"></account-nickname-item>
+
+  <account-nickname-item *ngIf="!this.hideAccounts.loanAccounts" [accountType]="loanAccounts" [accountTypeLabel]="'LOANS'" class="list-item"></account-nickname-item>
+
+  <account-nickname-item *ngIf="!this.hideAccounts.mortgageAccounts" [accountType]="mortgageAccounts" [accountTypeLabel]="'MORTGAGES'" class="list-item"></account-nickname-item>
+
+  <account-nickname-item *ngIf="this.hideAccounts.iraAccounts === false && iraAccounts.length" [accountType]="iraAccounts" [accountTypeLabel]="'IRA'" class="list-item"></account-nickname-item>
+
+  <account-nickname-item *ngIf="this.hideAccounts.certificateAccounts === false && certificateAccounts.length" [accountType]="certificateAccounts" [accountTypeLabel]="'Certificate'" class="list-item"></account-nickname-item>
+
+  <div class="control-button">
+    <button ion-button class="forward-button" color="main-text-color" (click)="onSubmit()">SUBMIT</button>
+  </div>
+</ion-content>

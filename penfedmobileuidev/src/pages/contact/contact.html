@@ -1,0 +1,77 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-row class="contact-header">
+    <ion-col col-2  *ngIf="!this.fromLogin">
+      <button ion-button menuToggle>
+          <!-- <ion-icon *ngIf="this.show" ios="ios-close" md="ios-close"></ion-icon> -->
+          <ion-icon *ngIf="!this.show" name="menu"></ion-icon>
+        </button>
+    </ion-col>
+    <ion-col col-2  *ngIf="this.fromLogin">
+      <button ion-button  (click)="backToLogin()">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-8>
+      <ion-title text-left>CONTACT US</ion-title>
+    </ion-col>
+    <ion-col col-2 *ngIf="!this.fromLogin">
+      <button ion-button>
+        <ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header class="list-header">CONTACT PENFED</ion-list-header>
+    <contact-service></contact-service>
+    <!-- <div *ngIf="this.fromLogin"> -->
+    <ion-list-header class="list-header">FIND A REALITY AGENT</ion-list-header>
+    <ion-item class="find-agent-field">
+      <p class="realityDesc">By selecting Find an Agent, you are acknowledging that you have read the <a (click)="gotoAFBADisclosure()">Affiliated Business Arrangement Disclosure</a>.</p>
+    </ion-item>
+
+    <ion-row >
+      <ion-col col-2></ion-col>
+      <ion-col col-8>
+        <div>
+          <button class="agentButton" ion-button block>FIND AN AGENT</button>
+        </div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+
+    <ion-list-header class="list-header">ABOUT PENFED</ion-list-header>
+    <ion-item class="about-penfed-field">
+      <ion-row>
+        <p class="realityDesc">Thank you for using the PenFed Mobile App — the app that helps our more than 1.3 million members do better every day. Since 1935, we have had the privilege of supporting our members with their financial goals — from auto and home ownership, to financing weddings and vacations, to saving for their future.
+          <br>
+          <br>
+           The PenFed Mobile App puts your accounts at your fingertips 24 hours a day, 7 days a week, anytime, anywhere... just one more way we are helping our members do better.
+          <br>
+          <br>
+          We are federally
+          insured by NCUA and an equal housing lender.</p>
+      </ion-row>
+    </ion-item>
+    <!-- </div> -->
+  </ion-list>
+  <!-- <ion-row *ngIf="this.fromLogin">
+    <ion-col col-12 class="contact-footer">
+      <p>Terms & Conditions and Privacy Policy</p>
+    </ion-col>
+  </ion-row> -->
+  <ion-row>
+    <ion-col col-12 class="contact-footer">
+      <a class="terms-conditions-a" (click)="gotoTermsAndConditions()"><p>Terms and conditions and privacy policy</p></a>
+      <!-- <p>Terms & Conditions and Privacy Policy</p> -->
+    </ion-col>
+  </ion-row>
+
+</ion-content>

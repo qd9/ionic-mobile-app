@@ -1,0 +1,222 @@
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import url( 'https://fonts.googleapis.com/css?family=Montserrat');
+
+#gradientBackground {
+  background: linear-gradient(180deg, $header-color 0%, #008FC6 100%);
+}
+// search icon
+
+.search {
+  height: 2.4rem;
+
+  .icon-search.icon {
+    &.icon.ion-md-search,
+    &.ion-ios-search-outline {
+      color: $pf-mobile-white;
+      padding-left: 1.8rem;
+      font-size: 2.4rem;
+    }
+  }
+}
+// each list bar
+
+.app-menu-item {
+  color: $pf-mobile-white;
+  font-size: 1.6rem;
+  font-family: 'monserratRegular', sans-serif !important;
+  background: transparent;
+  border-bottom: 0.01em solid #10375B;
+  height: 5.5rem;
+
+  .item-inner {
+    border-bottom: none;
+  }
+}
+
+.menu-list:last-child {
+  border-bottom: none;
+}
+//list icon
+
+.list-icon {
+  padding: 1.8rem 0 0 2.2rem;
+}
+//list title
+
+.list-content {
+  margin-left: 2.2rem;
+}
+
+#account-menuToggle-button {
+  background-color: $header-color;
+  height: 1.8rem;
+  border-radius: 0;
+  font-size: 2.8rem;
+  padding: 0;
+
+  .button-inner {
+    color: $pf-mobile-white;
+  }
+}
+
+#account-mail-button {
+  background-color: transparent;
+  font-size: 2.8rem;
+  padding: 0;
+}
+
+.submenu {
+  font-family: 'monserratRegular', sans-serif !important;
+  font-size: 1.6rem;
+  color: $pf-mobile-white;
+  border-bottom: 1px solid #10375B;
+
+  &.menu-active {
+    background-color: $pf-mobile-white;
+    color: #0E2C52;
+    font-weight: bold;
+  }
+}
+
+.sidenav {
+  background-color: $pf-mobile-white;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  .submenu-item {
+    .item-block .item-inner,
+    .item-block .item-inner {
+      border-bottom: none;
+    }
+  }
+}
+
+.sublist {
+  display: inline-block;
+  height: 55px;
+}
+
+.submenu-item {
+  height: 4.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-left: 6.4rem;
+  padding-top: 1.3rem;
+  color: rgba(26, 161, 218, 1);
+  background-color: $pf-mobile-white;
+  animation-duration: 4s;
+}
+
+.menu-header {
+  .menu-toolbar {
+    min-height: 4.7rem;
+
+    .toolbar-background {
+      background-color: $header-color;
+      border-bottom: 1px solid #34A2DE;
+    }
+  }
+}
+//hide the last child border
+
+.last-item {
+  .app-menu-item {
+    border-bottom: none;
+  }
+}
+//
+// .toolbar-background.toolbar-background-ios{
+//   height: 73%;
+// }
+
+.ios ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child ion-title {
+  padding-top: 0;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-crescent {
+  width: 33px;
+  height: 33px;
+  margin: 0 auto;
+
+  & > * {
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+.logOutAlertBox {
+  .alert-title {
+    text-align: center !important;
+    font-size: 20px !important;
+  }
+
+  .alert-sub-title {
+    text-align: center !important;
+  }
+
+  .alert-button-group {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+
+    .alert-button {
+      color: #488aff;
+      text-transform: none!important;
+      font-size: 16px;
+    }
+  }
+}
+
+.sub-page-header {
+  font-family: 'monserrat600',sans-serif !important;
+  background-color: $pf-mobile-dark;
+  font-family: 'monserrat600',sans-serif !important;
+  font-size: 14px;
+  border-bottom: 1px solid #00A1DF;
+  color: $pf-mobile-white;
+  height: 4.6rem;
+
+  .toolbar-title {
+    color: $pf-mobile-white;
+    line-height: 4.7rem;
+    text-align: left;
+    margin-left: 1.2rem;
+  }
+
+  .backButton {
+    margin: 1.1rem;
+    background-color: transparent;
+    color: $pf-mobile-white;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .ion-ios-arrow-back {
+    font-size: 2.4rem;
+    line-height: 2.3rem;
+  }
+}
+.menu-content-open .scroll-content {
+  overflow-y: hidden;
+}

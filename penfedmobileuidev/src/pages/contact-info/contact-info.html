@@ -1,0 +1,83 @@
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <ion-row class="contact-info-header">
+      <ion-col col-1>
+        <button (click)="popView()" class="backButton">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-11>
+        <ion-title class="information-title" text-left>CONTACT INFORMATION</ion-title>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="userContainer">
+      <p class="userName">{{ userName }}</p>
+    </ion-row>
+    <div>
+      <ion-item-divider class="dividerHeading">
+        <div class="headingTitle">MAILING ADDRESS</div>
+      </ion-item-divider>
+      <button ion-item class="list-item" (click)="goToUpdateMailingAddress()">
+        <div class="item-group">
+          <div class="item-inner-contant">
+            <p>{{streetAddress1}} {{streetAddress2}}</p>
+            <p>{{cityAddress}}, {{stateAddress}} {{zip}}</p>
+          </div>
+          <div class="item-inner-icon">
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div *ngIf="isTherePhysicalAddress">
+      <ion-item-divider class="dividerHeading">
+        <div class="headingTitle">PHYSICAL ADDRESS</div>
+      </ion-item-divider>
+      <button ion-item class="list-item" (click)="goToUpdateMailingAddress()">
+        <div class="item-group">
+          <div class="item-inner-contant">
+            <p>{{physicalstreetAddress1}} {{physicalstreetAddress2}}</p>
+            <p>{{physicalcityAddress}}, {{physicalstateAddress}} {{physicalzip}}</p>
+          </div>
+          <div class="item-inner-icon">
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div>
+      <ion-item-divider class="dividerHeading">
+        <div class="headingTitle">PHONE NUMBERS</div>
+      </ion-item-divider>
+      <button ion-item class="list-item" (click)="goToEditPhoneNumPage()">
+        <div class="item-group">
+          <div class="item-inner-contant">
+            <p *ngIf="showDayTimePhoneNumber"><span class="sub-title"> Daytime: </span>{{ dayTimeNum }}</p>
+            <p *ngIf="showEveningNumber"><span class="sub-title">Evening: </span>{{ eveningNum }}</p>
+            <p *ngIf="showCellNumber"><span class="sub-title" >Cell: </span>{{ cellNum }}</p>
+          </div>
+          <div class="item-inner-icon">
+            <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div>
+      <ion-item-divider class="dividerHeading">
+        <div class="headingTitle">Email</div>
+      </ion-item-divider>
+      <button ion-item class="list-item-last" (click)="goToEditEmailPage()">
+        <div class="item-group">
+          <div class="item-inner-contant-last">
+            <p><span class="sub-title">Primary: </span>{{primaryEmailAddress}}</p>
+            <p *ngIf="showEmail"><span class="sub-title" >Secondary: </span>{{ secondaryEmail }}</p>
+          </div>
+          <div class="item-inner-icon-last">
+              <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+          </div>
+        </div>
+      </button>
+    </div>
+  </ion-grid>
+</ion-content>

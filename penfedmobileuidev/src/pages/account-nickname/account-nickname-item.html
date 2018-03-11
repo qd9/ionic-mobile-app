@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+  <ion-list>
+    <ion-item-divider class="dividerHeading">
+      <div class="headingTitle">{{accountTypeLabel}}</div>
+    </ion-item-divider>
+    <ng-container *ngFor="let account of accountType, let i = index">
+      <ion-item *ngIf="account.showAccount">
+        <ion-label color="primary" stacked>
+          <span>{{account.fullName}}</span>
+          <span>({{account.numLast4}})</span>
+        </ion-label>
+        <ion-input type="text" name="{{'nickname'+i}}" [(ngModel)]="account.nickname" (change)="mychange(account)"></ion-input>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+</form>

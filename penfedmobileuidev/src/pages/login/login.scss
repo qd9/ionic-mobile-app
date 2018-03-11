@@ -1,0 +1,421 @@
+page-login {
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  font-family: 'Montserrat', sans-serif !important;
+
+  .login-header {
+    .login-toolbar {
+      .toolbar-title {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .login-toolbar {
+    margin-bottom: 25px;
+  }
+
+  .title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .logo-main {
+    height: 100%;
+    width: 100%;
+  }
+
+  .login-page {
+    linear-gradient: (180deg, rgba(13, 43, 83, 0.6) 0%, rgba(13, 43, 83, 0.94) 87.53%, #0D2B53 100%);
+    background: url("../assets/img/HeroImage.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  /* Background Images based on Geo Location - Start*/
+  .login-page.birthday
+  {
+  	background-image: url(../assets/login/images/phone_Login_Birthday.jpg);
+  }
+  .login-page.california
+  {
+  	background-image: url(../assets/login/images/phone_Login_California.jpg);
+  }
+  .login-page.dc
+  {
+  	background-image: url(../assets/login/images/phone_Login_DC.jpg);
+  }
+  .login-page.florida
+  {
+  	background-image: url(../assets/login/images/phone_Login_Florida.jpg);
+  }
+  .login-page.georgia
+  {
+  	background-image: url(../assets/login/images/phone_Login_Georgia.jpg);
+  }
+  .login-page.winter
+  {
+  	background-image: url(../assets/login/images/phone_Login_Holiday.jpg);
+  }
+  .login-page.independence
+  {
+  	background-image: url(../assets/login/images/phone_Login_July4th.jpg);
+  }
+  .login-page.labor
+  {
+  	background-image: url(../assets/login/images/phone_Login_LaborDay.jpg);
+  }
+  .login-page.memorial
+  {
+  	background-image: url(../assets/login/images/phone_Login_MemorialDay.jpg);
+  }
+  .login-page.mlk
+  {
+  	background-image: url(../assets/login/images/phone_Login_MLKDay);
+  }
+  .login-page.newyears
+  {
+  	background-image: url(../assets/login/images/phone_Login_NewYears.jpg);
+  }
+  .login-page.newyork
+  {
+  	background-image: url(../assets/login/images/phone_Login_NewYork.jpg);
+  }
+  .login-page.northcarolina
+  {
+  	background-image: url(../assets/login/images/phone_Login_NorthCarolina.jpg);
+  }
+  .login-page.presidents
+  {
+  	background-image: url(../assets/login/images/phone_Login_PresidentsDay.jpg);
+  }
+  .login-page.puertorico
+  {
+  	background-image: url(../assets/login/images/phone_Login_PuertoRico.jpg);
+  }
+  .login-page.texas
+  {
+  	background-image: url(../assets/login/images/phone_Login_Texas.jpg);
+  }
+  .login-page.thanksgiving
+  {
+  	background-image: url(../assets/login/images/phone_Login_Thanksgiving.jpg);
+  }
+  .login-page.veterans
+  {
+  	background-image: url(../assets/login/images/phone_Login_VeteransDay.jpg);
+  }
+
+  .background1 { background: url(../assets/login/images/phone_Login_California.jpg) }
+  .background2 { background: url(../assets/login/images/phone_Login_DC.jpg) }
+  .background3 { background: url(../assets/login/images/phone_Login_Florida.jpg) }
+  .background4 { background: url(../assets/login/images/phone_Login_Texas.jpg) }
+
+  /* Background Images based on Geo Location - End*/
+
+
+  .login-content {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  .greetString {
+    font-size: 28px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #FFFFFF;
+    padding-left: 16px;
+  }
+  // .greetingString:nth-child(0){
+  //   margin-top:55px;
+  // }
+  .welcome-to-pen-fed {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 16px;
+  }
+
+  .login-as-different-u {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+    //padding-left: 16px;
+  }
+
+  .need-help-logging-in {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .enable-touch-id,
+  .save-username {
+    color: #F4F4F4;
+    font-size: 14px;
+  }
+
+  .login-footer {
+    .login-footer-link {
+      height: 18px;
+      width: 92px;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.7rem;
+      margin-top: 60px;
+      margin-bottom:30px;
+    }
+  }
+
+  .login-footer {
+    .login-footer-linkproducts {
+      height: 18px;
+      width: 92px;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.7rem;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom:30px;
+    }
+  }
+
+  .login-footer {
+    .login-footer-linklocations {
+      height: 18px;
+      width: 92px;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.7rem;
+      text-align: right;
+      margin-top: 60px;
+      margin-bottom:30px;
+    }
+  }
+
+  .submit-btn {
+    background-color: #0095D2;
+    height: 50px;
+  }
+
+  .member-item {
+    opacity: 0.9;
+    background-color: #FFFFFF;
+  }
+
+  .list.list-md {
+    margin-bottom: 0;
+  }
+
+  .pwd-item {
+    opacity: 0.9;
+    background-color: #FFFFFF;
+  }
+
+  .footer-top {
+    margin-bottom: 16px;
+  }
+
+  .gap-top {
+    margin-top: 16px;
+  }
+
+  .rectangleUnderLink {
+    border-bottom: 2px solid #00A1DF;
+  }
+
+  .networkBanner.label {
+    margin: 0;
+    color: #FFF;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    margin-top:-25px;
+  }
+
+  test {
+    padding-left: 2px;
+  }
+
+  .bottom {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    margin-top: -15px;
+  }
+  .terms-conditions-a {
+    height: 15px;
+    width: 330px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+    padding:0px;
+    }
+
+  .grid.full-height {
+    min-height: 100%;
+  }
+  .list.list-ios{
+    margin:-1px 0px 2px 0px;
+  }
+
+  .inputIconBackground {
+    $text-input-md-highlight-color: color($colors-md, primary);
+  }
+
+  .noPadding {
+    position: relative;
+  }
+
+  .quicklinks {
+    position: relative;
+    margin-top: 65px;
+    bottom: 10px;
+  }
+  .toggle-md.toggle-checked .toggle-icon {
+    background-color: $pf-mobile-light-blue-alt-two;
+  }
+  .toggle-md.toggle-checked .toggle-inner {
+    -webkit-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
+    background-color: #ffffff;
+  }
+}
+
+.deviceAlertBox {
+    .alert-wrapper {
+        text-align: center;
+        max-width: 80%;
+        .alert-head {
+            text-align: center!important;
+            .alert-title {
+                color: #173366;
+                padding-bottom: 10px;
+                font-size: 20px;
+            }
+        }
+        .alert-message {
+            a {
+                text-decoration: none;
+            }
+        }
+        .alert-button-group {
+            background: #173366!important;
+            display: flex;
+            justify-content: center;
+            .alert-button {
+                color: #FFFFFF;
+                font-size: 15px;
+                text-transform: none;
+            }
+        }
+    }
+}
+  /* Password validation popup css starts*/
+  .passwordAlertBox {
+    .alert-wrapper {
+        text-align: center;
+        .alert-head {
+            text-align: center!important;
+            .alert-title {
+                font-size: 20px;
+                margin-top: 4px;
+            }
+        }
+        .alert-button-group {
+              display: flex;
+            .alert-button {
+                font-size: 15px;
+                text-transform: none;
+            }
+        }
+    }
+  }
+  /* Password validation popup css ends*/
+  ion-modal.my-popup {
+    // font-family: Montserrat;
+    @media (min-width: 300px) and (min-height: 500px) {
+        ion-backdrop {
+            visibility: visible;
+        }
+    }
+    .modal-wrapper {
+        position: absolute;
+        overflow: hidden;
+        border-radius: 2px;
+        width: 80vw;
+        height: 65vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 0;
+        box-shadow: 0 16px 20px rgba(0, 0, 0, .4);
+        background-color: #fafafa;
+        text-align: center;
+        header h2 {
+            color: #173366;
+            padding-bottom: 10px;
+            font-size: 20px!important;
+        }
+        section {
+            font-size: 15px;
+            padding: 15px;
+            a {
+                color: #59b4f9;
+            }
+        }
+        button {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            background: none;
+            // text-align: right;
+            padding-right: 15px;
+            color: #488aff;
+            .button-inner {
+              justify-content: flex-end !important;
+            }
+        }
+    }
+}
+
+.platform-ios {
+    ion-modal.my-popup {
+        .modal-wrapper {
+            border-radius: 13px;
+            button {
+                // background: none;
+                // color: #488aff;
+                border-top: 0.55px solid #dbdbdf;
+                // padding-right: 0;
+                // text-align: center;
+                .button-inner {
+                  justify-content: center !important;
+            }
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .modal-wrapper {
+        height: 40vh!important;
+    }
+}

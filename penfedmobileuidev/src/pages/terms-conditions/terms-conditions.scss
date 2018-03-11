@@ -1,0 +1,95 @@
+page-terms-conditions {
+    font-size: 15px;
+    font-family: monserratRegular;
+    .terms-modal {
+        .back-button {
+            display: block;
+            color: #c2c1c0;
+            .back-button-text {
+                display: none;
+            }
+            &:after {
+                border-right: 1px solid #c2c1c0;
+            }
+        }
+    }
+    h1 {
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 0;
+        margin: 1em auto;
+        color: #036;
+        font-weight: bold;
+        &.terms {
+            text-align: center;
+        }
+    }
+    h2 {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 15px;
+        margin: 0;
+        min-height: 100%;
+    }
+
+    /* Header with close button - Start*/
+    .scroll-content {
+      background-color: #f4f4f4;
+      height: 100%;
+    }
+
+    .terms-header {
+      font-family: 'monserrat600',sans-serif;
+      background-color: $header-color;
+      height: 4.6rem;
+      border-bottom: 1px solid $pf-mobile-light-blue-alt;
+    }
+    .instruction-title {
+      font-family: 'monserrat600',sans-serif;
+      font-size: 1.5rem;
+      color: #282828;
+      margin-top: 2.6rem;
+      margin-left: 1.6rem;
+    }
+    .col-content {
+      padding: 0;
+    }
+    //only for ios
+
+    .title.title-ios {
+      margin-left: 2rem;
+    }
+    //=============
+
+    .toolbar-title {
+      text-align: left;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      line-height: 3.7rem;
+      color: white;
+    }
+
+    .backButton {
+      background-color: $header-color;
+      margin: 1.1rem 1.1rem 1.1rem 0.5rem;
+    }
+
+    .icon.ion-md-close {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 1.3rem;
+    }
+
+    .terms-and-conditions {
+      min-height:100%;
+      padding-bottom:10px;
+    }
+    .last-paragraph{
+      margin-bottom:40px;
+    }
+    /* Header with close button - End */
+}

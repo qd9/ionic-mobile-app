@@ -1,0 +1,83 @@
+<ion-grid no-padding *ngIf="headerParams.pageType; else Standard_Page_Header">
+  <ion-row class="pageHeader">
+     <ion-col col-1>
+      <button ion-button (click)="returnToAccounts()" class="backButton">
+        <ion-icon ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-11 class="accountName">
+      <span *ngIf="!headerParams.payload.nickname">{{headerParams.payload.fullName}}</span>
+      <span *ngIf="headerParams.payload.nickname">{{headerParams.payload.nickname}}</span>
+      <span>({{headerParams.payload.numLast4}})</span>
+      </ion-col>
+  </ion-row>
+  <!--IF LOAN, MORTGAGE, IRA or CERTIFICATE-->
+  <ion-row *ngIf="headerParams.payload.parentAcctType === 'LOAN' || headerParams.payload.parentAcctType === 'MORTGAGE' || headerParams.payload.parentAcctType === 'IRA' || headerParams.payload.parentAcctType === 'CERTIFICATE'" class="pageTitle" [ngClass]="{'account':headerParams.pageType}">
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Current Balance</div>
+        <div class="balance">{{ headerParams.payload.currentBal | formatPrice }}
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!--ENDIF-->
+  <!--IF CHECKING_SAVINGS-->
+  <ion-row *ngIf="headerParams.payload.parentAcctType === 'CHECKING_SAVING'" class="pageTitle" [ngClass]="{'account':headerParams.pageType}">
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Available Balance</div>
+        <div class="balance">{{ headerParams.payload.availableBal | formatPrice }}
+          <span *ngIf="showAccountDetails"><ion-icon ios="ios-remove-circle" md="ios-remove-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+          <span *ngIf="!showAccountDetails"><ion-icon ios="ios-add-circle" md="ios-add-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+  <!--ENDIF-->
+  <!--IF CREDITCARD-->
+  <ion-row *ngIf="headerParams.payload.parentAcctType === 'CREDITCARD'" class="pageTitle credit-card" [ngClass]="{'account':headerParams.pageType, 'active':showAccountDetails}">
+    <div class="accountIcon" text-right>
+      <span *ngIf="showAccountDetails"><ion-icon ios="ios-remove-circle" md="ios-remove-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+      <span *ngIf="!showAccountDetails"><ion-icon ios="ios-add-circle" md="ios-add-circle" (click)="showAccountDetails = !showAccountDetails"></ion-icon></span>
+    </div>
+    <ion-col col-12 text-center class="ion-title">
+      <div class="availableBalLabel"></div>
+      <div class="availableBal">
+        <div>Current Balance</div>
+        <div class="balance">{{ headerParams.payload.currentBal | formatPrice }}
+        </div>
+      </div>
+    </ion-col>
+    <account-header-credit-card-display [showAccountDetailsToggle]='showAccountDetails'></account-header-credit-card-display>
+  </ion-row>
+  <!--ENDIF-->
+  <account-header-account-details [showAccountDetailsToggle]='showAccountDetails'></account-header-account-details>
+</ion-grid>
+<ng-template #Standard_Page_Header>
+  <!--IF NONE -->
+  <ion-header>
+    <ion-row class="pageHeader" >
+      <ion-col col-2>
+        <button ion-button menuToggle>
+          <ion-icon *ngIf="this.show" ios="ios-close" md="ios-close"></ion-icon>
+          <ion-icon *ngIf="!this.show" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8 text-center class="ion-title">
+          <ion-title><img class="logo-white" src="assets/White.svg" /></ion-title>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button (click)='goToInbox()'>
+          <ion-icon ios="ios-mail" md="ios-mail" icon-right></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-header>
+  <ion-row *ngIf="pageNameParam" class="pageTitle staticPageTitle">
+    <ion-col col-12 text-center class="ion-title">{{pageNameParam}}</ion-col>
+  </ion-row>
+  <!--ENDIF-->
+</ng-template>

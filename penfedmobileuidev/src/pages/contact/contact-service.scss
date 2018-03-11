@@ -1,0 +1,65 @@
+contact-service {
+  .hours {
+    font-family: 'monserrat500',sans-serif !important;
+    font-size: 1.5rem !important;
+    color: #282828;
+  }
+
+  .common-h2 {
+    font-family: 'monserrat300',sans-serif !important;
+    font-size: 1.5rem !important;
+    color: #282828;
+  }
+
+  #mail-icon {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #clock-icon {
+    margin-top: -4.4rem;
+  }
+
+  .item ion-icon[item-start] + .item-inner {
+    margin-left: 0.5rem;
+  }
+
+  .contact-info {
+    text-decoration: none;
+    color: $pf-mobile-legal-blue;
+    font-size: 1.2rem;
+    font-family: 'monserratRegular', sans-serif !important;
+  }
+
+  .toolbar-title {
+    color: $pf-mobile-white;
+  }
+
+  .clock-content {
+    .item-inner {
+      .input-wrapper {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .input-wrapper {
+    border-bottom: 1px solid #E5E4E4;
+  }
+
+  .blueIcon {
+    color: rgba(26, 161, 218, 1) !important;
+    margin-top: 0;
+  }
+
+  .time {
+    font-family: 'monserratRegular', sans-serif !important;
+    font-size: 1.5rem;
+    color: #282828;
+  }
+  //delete border
+  .item.item-block .item-inner,
+  .list .item-block .item-inner {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-row class="security-header">
+    <ion-col col-1>
+      <button (click)="popView()" class="backButton">
+        <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-11>
+      <ion-title class="security-title" text-left>SECURITY CODE</ion-title>
+    </ion-col>
+  </ion-row>
+</ion-header>
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <ion-row class="userContainer">
+      <p class="userName">PLEASE ENTER YOUR SECURITY CODE</p>
+    </ion-row>
+
+    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+      <ion-row class="label-row">
+        <ion-col>
+          <ion-list no-lines>
+            <ion-item no-padding class="phoneNumber-item">
+              <ion-label color="main-text-color" stacked>SECURITY CODE</ion-label>
+              <ion-input type="number" [(ngModel)]="securityNumber" formControlName="securityNumber" name="securitynumber" clearInput="true"></ion-input>
+            </ion-item>
+          </ion-list>
+          <!-- <div class="security-error" *ngIf="user.get('securityNumber').hasError('minlength') && user.get('securityNumber').dirty">
+            The security code should be between 4-6 length
+          </div>
+          <div class="security-error" *ngIf="user.get('securityNumber').hasError('maxlength') && user.get('securityNumber').dirty">
+            The security code should not more than 6 length
+          </div> -->
+        </ion-col>
+      </ion-row>
+
+
+
+      <div class="security-validate">
+        <div><span (click)="popUpMethod()">What is My Security Code?</span></div>
+        <div><span (click)="goToHelpLogin()">I Forgot My Security Code</span></div>
+      </div>
+
+      <ion-row class="phone-number-update-button">
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+          <div>
+            <button class="update-button" color="main-text-color" type="submit" ion-button block [disabled]="user.controls.securityNumber.invalid">CONTINUE</button>
+          </div>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
